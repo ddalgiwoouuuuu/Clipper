@@ -3,13 +3,14 @@
 #include <string.h>
 
 int main(void) {
-    int N;
+    int N; //정수 N을 입력으로 받습니다. 이 N은 입력할 문자열의 개수를 나타냅니다.
     scanf("%d", &N);
 
     int group_num = 0; //그룹 단어의 개수
     for (int i = 0; i < N; i++) {
         char word[101];
         scanf("%s", word);
+        //group_num이라는 변수를 초기화하여 그룹 단어의 개수를 저장합니다. 처음에는 그룹 단어의 개수가 0입니다.
 
         //그룹 단어인지 확인
         int alphabet[26]; //index 0 부터 a, b, ..
