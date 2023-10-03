@@ -22,6 +22,12 @@ int main(void) {
         for (int k = 0; k < word_len; k++) {
             char letter = word[k];
             if (alphabet[letter - 'a'] == 0) { //이 부분은 현재 글자 letter가 어떤 알파벳인지를 판별하는데 사용. 현재 문자가 처음 나타난 경우 (alphabet[letter - 'a']가 0인 경우), 해당 알파벳을 나타냈다고 표시합니다.
+                alphabet[letter - 'a'] = 1;  // 따라서 없었던 알파벳이 생겼으므로 1 처리.
+            }
+            else { //이미 1이라면, 바로 앞 문자 확인
+                if (word[k - 1] != word[k]) //앞 문자와 다르다면, 그룹 단어가 아님
+                    break;
+            }
             }
             else { //이미 1이라면, 바로 앞 문자 확인
                 if (word[k - 1] != word[k]) //앞 문자와 다르다면, 그룹 단어가 아님
