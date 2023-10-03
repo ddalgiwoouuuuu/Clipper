@@ -7,7 +7,7 @@ int main() {
     char grade[3]; //학점 문자열(grade)
     double credit; //학점(credit),
 
-    double sumCredit = 0.0; //sumCredit는 총 학점의 합을 저장합니다
+    double sumCredit = 0.0; //sumCredit는 총 학점의 합을 저장
     double temp; //temp는 임시로 학점을 저장할 변수
     double res = 0.0; //res는 학점 평균을 계산할 결과를 저장
     for (int i = 0; i < 20; i++) { //for 루프는 20번 반복하며, 각 반복에서 scanf 함수를 사용하여 이름, 학점, 학점 문자열을 입력받습니다.
@@ -26,10 +26,10 @@ int main() {
         else temp = 1;
 
         if (grade[1] == '+') temp += 0.5;
-        //만약 학점 문자열의 두 번째 문자가 '+'인 경우, temp에 0.5를 더합니다
+        //만약 학점 문자열의 두 번째 문자가 '+'인 경우, temp에 0.5를 더함
 
         res += credit * temp;
-        //학점 평균을 계산하기 위해 현재 학점(credit)과 변환된 학점(temp)를 곱하고, 그 값을 res에 더합니다.
+        //학점 평균을 계산하기 위해 현재 학점(credit)과 변환된 학점(temp)를 곱하고, 그 값을 res에 더함
     }
 
     printf("%lf", res / sumCredit);
