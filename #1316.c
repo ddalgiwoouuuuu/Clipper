@@ -29,11 +29,7 @@ int main(void) {
                     break;
             }
             }
-            else { //이미 1이라면, 바로 앞 문자 확인
-                if (word[k - 1] != word[k]) //앞 문자와 다르다면, 그룹 단어가 아님
-                    break;
-            }
-
+            
             if (k == word_len - 1) { //여기까지 오면 그룹단어
                 //printf("%s is a group word\n", word);
                 group_num++;
