@@ -21,8 +21,7 @@ int main(void) {
         int word_len = strlen(word);
         for (int k = 0; k < word_len; k++) {
             char letter = word[k];
-            if (alphabet[letter - 'a'] == 0) { //이 부분은 현재 글자 letter가 어떤 알파벳인지를 판별하는데 사용. 알파벳 문자 'a'의 아스키 코드 값은 'a'는 97이고, 'b'는 98, 'c'는 99, ... 'z'는 122. 따라서 letter - 'a' 연산은 현재 글자 letter가 'a'로부터 몇 번째 알파벳인지를 나타냄. 예를 들어, 'p'의 경우 'a'로부터 15번째 알파벳이므로 letter - 'a'는 15
-                alphabet[letter - 'a'] = 1;  // 따라서 없었던 알파벳이 생겼으므로 1 처리.
+            if (alphabet[letter - 'a'] == 0) { //이 부분은 현재 글자 letter가 어떤 알파벳인지를 판별하는데 사용. 현재 문자가 처음 나타난 경우 (alphabet[letter - 'a']가 0인 경우), 해당 알파벳을 나타냈다고 표시합니다.
             }
             else { //이미 1이라면, 바로 앞 문자 확인
                 if (word[k - 1] != word[k]) //앞 문자와 다르다면, 그룹 단어가 아님
